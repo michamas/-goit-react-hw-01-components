@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile {
+  padding: 10px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.avatar {
+  margin-bottom: 30px;
+}
+.name {
+  font-size: larger;
+}
