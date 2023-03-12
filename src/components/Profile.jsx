@@ -1,28 +1,33 @@
 import PropTypes from 'prop-types';
 import './Profile.css';
 
-const Profile = ({ username = 'unknown', tag, location, avatar, stats }) => {
+const Profile = ({
+  username = 'unknown',
+  tag,
+  location,
+  avatar,
+  stats = { followers: 0, views: 0, likes: 0 },
+}) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" width="200px" />
-        <p class="name">{username}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
+    <div className="profile">
+      <div className="description">
+        <img src={avatar} alt="User avatar" className="avatar" width="200px" />
+        <p className="name">{username}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </div>
-
-      <ul class="stats">
+      <ul className="stats">
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
+          <span className="label">Followers</span>
+          <span className="quantity">{stats.followers}</span>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
+          <span className="label">Views</span>
+          <span className="quantity">{stats.views}</span>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
+          <span className="label">Likes</span>
+          <span className="quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
@@ -30,12 +35,11 @@ const Profile = ({ username = 'unknown', tag, location, avatar, stats }) => {
 };
 
 Profile.prototype = {
-  username: PropTypes.string,
+  username: PropTypes.string.isRequired,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.number,
-  // czy jeżeli stats jest obietkem to jest to poprawnie zapisane?
+  stats: PropTypes.objectOf(PropTypes.number),
 };
 
 export default Profile;
