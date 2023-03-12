@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import './Profile.css';
 
-const Profile = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ username = 'unknown', tag, location, avatar, stats }) => {
   return (
     <div class="profile">
       <div class="description">
         <img src={avatar} alt="User avatar" class="avatar" width="200px" />
         <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
+        <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
 
@@ -35,6 +35,7 @@ Profile.prototype = {
   location: PropTypes.string,
   avatar: PropTypes.string,
   stats: PropTypes.number,
+  // czy jeżeli stats jest obietkem to jest to poprawnie zapisane?
 };
 
 export default Profile;
