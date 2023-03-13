@@ -27,7 +27,6 @@ export const App = () => {
         stats={user.stats}
       /> */}
       <Profile {...user} />
-      <Profile {...user} />
 
       <Statistics title="Upload stats" stats={data} />
     </div>
