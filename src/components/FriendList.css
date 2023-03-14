@@ -1,0 +1,16 @@
+.friend-item {
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(171, 196, 178);
+
+}
+
+.statusActive {
+    background-color: green;
+}
+.statusInactive {
+    background-color:red;
+}
+
