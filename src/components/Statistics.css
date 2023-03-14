@@ -7,10 +7,11 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 50vw;
+  max-width: 300px;
   text-align: center;
   /* padding: 20px auto; */
   padding: 20px;
-  font-size: 30px;
+  font-size: 25px;
   background-color: rgb(206, 210, 209);
 }
 .stat-list {

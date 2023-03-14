@@ -5,6 +5,7 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 50vw;
+  max-width: 300px;
   padding: 20px;
   background-color: rgb(237, 234, 230);
   display: flex;
