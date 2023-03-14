@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import './Statistics.css';
 
 //generate random color
-const getRandom = (min, max) => {
-  return Math.round(Math.random() * (max - min)) + min;
-};
+// const getRandom = (min, max) => {
+//   return Math.round(Math.random() * (max - min)) + min;
+// };
 
-const getRandomRGBAColor = (min = 50, max = 135, alpha = 1) => {
-  return `rgba(${getRandom(min, max)}, ${getRandom(min, max)}, ${getRandom(
-    min,
-    max
-  )}, ${alpha})`;
-};
+// const getRandomRGBAColor = (min = 50, max = 135, alpha = 1) => {
+//   return `rgba(${getRandom(min, max)}, ${getRandom(min, max)}, ${getRandom(
+//     min,
+//     max
+//   )}, ${alpha})`;
+// };
 
 const Statistics = ({ title, stats = [] }) => {
   return (
