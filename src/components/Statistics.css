@@ -1,16 +1,17 @@
 .statistics {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .title {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 50vw;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
   /* padding: 20px auto; */
-  padding: 20px;
+  padding: 10px 0;
   font-size: 25px;
   background-color: rgb(206, 210, 209);
 }
@@ -36,6 +37,6 @@
   color: black;
 }
 
-.status {
+/* .status {
   background-color: blue;
-}
+} */

@@ -1,0 +1,25 @@
+.table {
+  width: 50vw;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(183, 171, 196);
+}
+
+.table tr {
+  width: 10rem;
+  text-align: left;
+  /* align-items: center; */
+}
+
+.table th {
+  text-align: left;
+  width: 10rem;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.table td {
+  font-size: 15px;
+  text-align: left;
+  padding: 3px;
+}

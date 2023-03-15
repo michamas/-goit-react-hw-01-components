@@ -1,44 +1,30 @@
 import PropTypes from 'prop-types';
-import './FriendList.css';
+import css from './FriendList.module.css';
+import FriendsListItem from './FriendListItem';
 
-
-const FriendsList = ({title, friends =[]}) => {
-    return (
-        <section>
-        {friends.length > 0 ? (
-          <>
-            {title && <h2 className="title">{title}</h2>}
-
-            <ul className="friend-list">
-              {friends.map(friend => (
-                <li
-                  key={friend.id}
-                  className="friend-item"
-                >
-                    {/* {friends.isOnline ? statusActive : statusInactive} */}
-                    <span className=''></span>
-                    <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
-                    <p className="name">{friend.name}</p>    
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : (
-          <p>NO FRIENDS</p>
-        )}
-      </section>
-      )
-}
+const FriendsList = ({ title, friends = [] }) => {
+  return (
+    <>
+      {title && <h2 className={css.title}>{title}</h2>}
+      <ul className="list">
+        {friends.map(friend => (
+          <FriendsListItem {...friend} key={friend.id}></FriendsListItem>
+        ))}
+      </ul>
+      {title && <p className={css.bottomBar}></p>}
+    </>
+  );
+};
 
 FriendsList.prototype = {
-    title: PropTypes.string,
-    friends : PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            avatar: PropTypes.string,
-            isOnline: PropTypes.bool,
-        })
-    )
-}
+  title: PropTypes.string,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      isOnline: PropTypes.bool,
+    })
+  ),
+};
 
 export default FriendsList;

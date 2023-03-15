@@ -1,12 +1,12 @@
-/* .profile {
-  display: block;
-} */
+.profile {
+  margin-bottom: 30px;
+}
 .description {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   width: 50vw;
-  max-width: 300px;
-  padding: 20px;
+  max-width: 350px;
+  padding: 10px 0;
   background-color: rgb(237, 234, 230);
   display: flex;
   flex-direction: column;
