@@ -7,8 +7,26 @@ import user from './data/user.json';
 import data from './data/data.json';
 import friends from './data/friends.json';
 import transactions from './data/transactions.json';
+import clsx from 'clsx';
 
 export const App = () => {
+  //test biblioteki clsx
+
+  const some = true;
+
+  const classNamesCLSX = clsx(
+    '',
+    'first',
+    10,
+    undefined && 'second',
+    true && 'third',
+    false ? 'fourth' : 'six',
+    some && 'six'
+  );
+  // console.log(classNamesCLSX);
+
+  // ----
+
   return (
     <div
       style={{

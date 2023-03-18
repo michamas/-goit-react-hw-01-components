@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './Statistics.css';
+import styles from './Statistics.module.css';
 
 //generate random color
 // const getRandom = (min, max) => {
@@ -15,19 +15,19 @@ import './Statistics.css';
 
 const Statistics = ({ title, stats = [] }) => {
   return (
-    <section className="statistics">
+    <section className={styles.statistics}>
       {stats.length > 0 ? (
         <>
-          {title && <h2 className="title">{title}</h2>}
-          <ul className="stat-list">
+          {title && <h2 className={styles.title}>{title}</h2>}
+          <ul className={styles['stat-list']}>
             {stats.map(stat => (
               <li
                 key={stat.id}
-                className="item"
+                className={styles.item}
                 // style={{ backgroundColor: getRandomRGBAColor() }}
               >
-                <span className="label">{stat.label}</span>
-                <span className="percentage">{stat.percentage}%</span>
+                <span className={styles.label}>{stat.label}</span>
+                <span className={styles.percentage}>{stat.percentage}%</span>
               </li>
             ))}
           </ul>
